@@ -60,16 +60,16 @@ int main() {
     Solution solution;
 
     // Example: 342 + 465 = 807
-    ListNode* l1 = new ListNode(2, new ListNode(4, new ListNode(3)));  // 342
-    ListNode* l2 = new ListNode(5, new ListNode(6, new ListNode(4)));  // 465
+    ListNode* l1 = new ListNode(1, new ListNode(2, new ListNode(3)));  
+    ListNode* l2 = new ListNode(4, new ListNode(5, new ListNode(6)));  
 
     ListNode* result = solution.addTwoNumbers(l1, l2);
     
     std::cout << "Number 1: " << std::endl;
-    printList(l1);  // Output should be 7 0 8 (807)
+    printList(l1);  
     std::cout << "Number 2: " << std::endl;
-    printList(l2);  // Output should be 7 0 8 (807)
+    printList(l2);  
     std::cout << "Result: " << std::endl;
-    printList(result);  // Output should be 7 0 8 (807)
+    printList(result);  
     return 0;
 }
