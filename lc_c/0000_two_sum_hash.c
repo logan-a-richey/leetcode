@@ -87,28 +87,34 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
         }
         map_insert(map, nums[i], i);
     }
-
-    *returnSize = 0;
+    
+    int* result = malloc(sizeof(int) * 2);
+    result[0] = -1;
+    result[1] = -1;
+    
     map_free(map);
-    return NULL;
+    
+    return result;
 }
 
 // ============================================================================
 // test usage
 
 int main() {
-    int nums[] = {3, 2, 4};
-    int target = 6;
+    int arr1[] = {3, 2, 4};
+    int arr1_len = sizeof(arr1) / sizeof(int);
+    int tar1 = 6;  // result case
+    int tar2 = 11; // null case
     int returnSize;
     
-    int* res = twoSum(nums, 3, target, &returnSize);
-    
-    if (res) {
-        printf("[%d, %d]\n", res[0], res[1]);
-        free(res);
-    } else {
-        printf("null\n");
-    }
+    int* res;
+    res = twoSum(arr1, arr1_len, tar1, &returnSize);
+    printf("[%d, %d]\n", res[0], res[1]);
+    free(res);
+
+    res = twoSum(arr1, arr1_len, tar2, &returnSize);
+    printf("[%d, %d]\n", res[0], res[1]);
+    free(res);
     
     return 0;
 }
