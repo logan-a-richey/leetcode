@@ -10,13 +10,14 @@ You may assume the two numbers do not contain any leading zero, except the numbe
 #include <stdio.h>
 #include <stdlib.h>
 
+/*****************************************************************************/
 // Definition for singly-linked list.
 typedef struct ListNode {
     int val;
     struct ListNode* next;
 } ListNode;
 
-// ============================================================================
+/*****************************************************************************/
 // Declare header functions:
 ListNode* create_node(int val);
 ListNode* addTwoNumbers(ListNode* l1, ListNode* l2);
@@ -24,8 +25,9 @@ ListNode* make_linked_list_number(int num);
 void print_linked_list_number(ListNode* list);
 void free_linked_list(ListNode* list);
 
-// ============================================================================
+/*****************************************************************************/
 // Define header functions
+
 // Helper to create a new node
 ListNode* create_node(int val) {
     ListNode* node = (ListNode*)malloc(sizeof(ListNode));
@@ -114,7 +116,7 @@ void free_linked_list(ListNode* list) {
 }
 
 /*****************************************************************************/
-// test usage
+// Test usage
 
 int main() {
     ListNode* l1 = make_linked_list_number(123);
